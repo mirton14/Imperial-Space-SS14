@@ -347,11 +347,13 @@ public sealed partial class ShuttleSystem
    private void OnStationStartup(EntityUid uid, StationDataComponent component, ComponentStartup args)
    {
        AddEmergencyShuttle(component);
+        //AddLateJoinShuttle(component);
    }
 
    private void OnRoundStart(RoundStartingEvent ev)
    {
        SetupEmergencyShuttle();
+        //SetupLateJoinShuttle();
    }
 
    /// <summary>

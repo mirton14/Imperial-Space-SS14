@@ -1447,6 +1447,13 @@ namespace Content.Shared.CCVar
         // Imperial-start
         public static readonly CVarDef<bool>
             EconomyWagesEnabled = CVarDef.Create("economy.wages_enabled", true, CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool>
+            LateJoinShuttleEnabled = CVarDef.Create("shuttle.latejoin_enabled", true, CVar.SERVERONLY);
+
+        public static readonly CVarDef<string>
+            LateJoinOutpostMap = CVarDef.Create("shuttle.latejoinoutpost_map", "/Maps/latejoinoutpost.yml", CVar.SERVERONLY);
+
         // Imperial-end
     }
 }

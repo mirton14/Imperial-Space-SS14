@@ -1,4 +1,4 @@
-﻿using Robust.Shared.Utility;
+using Robust.Shared.Utility;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
 namespace Content.Server.Station;
@@ -10,4 +10,6 @@ public sealed partial class StationConfig
     /// </summary>
     [DataField("emergencyShuttlePath", customTypeSerializer: typeof(ResourcePathSerializer))]
     public ResourcePath EmergencyShuttlePath { get; set; } = new("/Maps/Shuttles/emergency.yml");
+    [DataField("lateJoinShuttlePath", customTypeSerializer: typeof(ResourcePathSerializer))]
+    public ResourcePath LateJoinShuttlePath { get; set; } = new("/Maps/Shuttles/latejoinshuttle.yml");
 }

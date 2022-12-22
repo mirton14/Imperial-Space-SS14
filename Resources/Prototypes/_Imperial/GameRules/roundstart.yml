@@ -3,3 +3,9 @@
   config:
     !type:GenericGameRuleConfiguration
     id: WageScheduler
+
+- type: gameRule
+  id: LateJoin
+  config:
+    !type:LateJoinRuleConfiguration
+    id: LateJoin

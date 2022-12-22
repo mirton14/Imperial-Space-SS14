@@ -1,0 +1,21 @@
+- type: entity
+  parent: BaseComputer
+  id: ComputerLateJoinShuttle
+  name: shuttle console
+  description: Used to send shuttle to the station.
+  components:
+    - type: LateJoinShuttleConsole
+    - type: ActivatableUI
+      key: enum.LateJoinConsoleUiKey.Key
+    - type: ActivatableUIRequiresPower
+    - type: UserInterface
+      interfaces:
+        - key: enum.LateJoinConsoleUiKey.Key
+          type: LateJoinConsoleBoundUserInterface
+    - type: ExtensionCableReceiver
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#43ccb5"
+    - type: Rotatable
+      rotateWhileAnchored: true

@@ -1,0 +1,18 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
+                      Title="{Loc 'shuttle-console-window-title'}">
+    <BoxContainer Orientation="Vertical">
+        <controls:StripeBack>
+            <Label Name="HyperspaceLabel" Text="{Loc 'shuttle-console-hyperspace-label'}" HorizontalAlignment="Center"/>
+        </controls:StripeBack>
+        <BoxContainer Name="HyperspaceDestinations" Orientation="Vertical"/>
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'shuttle-console-ftl-state'}"/>
+            <Label
+                Name="FTLState"
+                Text="{Loc 'ftl-shuttle-console-available'}"
+                HorizontalAlignment="Right"/>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

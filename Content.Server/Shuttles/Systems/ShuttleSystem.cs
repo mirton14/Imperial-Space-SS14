@@ -35,6 +35,7 @@ namespace Content.Server.Shuttles.Systems
             _sawmill = Logger.GetSawmill("shuttles");
 
             InitializeEmergencyConsole();
+            InitializeLateJoinConsole();
             InitializeEscape();
             InitializeFTL();
             InitializeIFF();

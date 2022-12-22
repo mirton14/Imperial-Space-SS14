@@ -8,18 +8,20 @@
   rules:
     - RampingStationEventScheduler
     - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Extended
   alias:
-  - extended
-  - shittersafari
+    - extended
+    - shittersafari
   name: extended-title
   showInVote: true #2boring2vote
   description: extended-description
   rules:
-  - BasicStationEventScheduler
-  - WageScheduler
+    - BasicStationEventScheduler
+    - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Secret
@@ -32,6 +34,7 @@
   rules:
     - Secret
     - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Sandbox
@@ -43,6 +46,8 @@
   maxPlayers: 5
   rules:
     - Sandbox
+    - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Traitor
@@ -55,6 +60,7 @@
     - Traitor
     - BasicStationEventScheduler
     - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Suspicion
@@ -98,6 +104,7 @@
     - Nukeops
     - BasicStationEventScheduler
     - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Zombie
@@ -114,6 +121,7 @@
     - Zombie
     - BasicStationEventScheduler
     - WageScheduler
+    - LateJoin
 
 - type: gamePreset
   id: Pirates
@@ -126,3 +134,4 @@
     - Pirates
     - BasicStationEventScheduler
     - WageScheduler
+    - LateJoin

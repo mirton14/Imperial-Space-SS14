@@ -1,4 +1,4 @@
-﻿using Content.Server.Shuttles.Systems;
+using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Systems;
 
 namespace Content.Server.Station.Components;
@@ -30,4 +30,7 @@ public sealed class StationDataComponent : Component
     /// </summary>
     [ViewVariables, Access(typeof(ShuttleSystem), Friend = AccessPermissions.ReadWrite)]
     public EntityUid? EmergencyShuttle;
+
+    [ViewVariables, Access(typeof(ShuttleSystem), Friend = AccessPermissions.ReadWrite)]
+    public EntityUid? LateJoinShuttle;
 }

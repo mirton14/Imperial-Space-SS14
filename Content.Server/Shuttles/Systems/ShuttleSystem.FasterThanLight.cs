@@ -249,6 +249,7 @@ public sealed partial class ShuttleSystem
 
                     SetDockBolts(comp.Owner, true);
                     _console.RefreshShuttleConsoles(comp.Owner);
+                    RefreshLateJoinConsoles();
                     break;
                 // Arriving, play effects
                 case FTLState.Travelling:
@@ -264,6 +265,7 @@ public sealed partial class ShuttleSystem
                     }
 
                     _console.RefreshShuttleConsoles(comp.Owner);
+                    RefreshLateJoinConsoles();
                     break;
                 // Arrived
                 case FTLState.Arriving:
@@ -314,11 +316,13 @@ public sealed partial class ShuttleSystem
                     comp.State = FTLState.Cooldown;
                     comp.Accumulator += FTLCooldown;
                     _console.RefreshShuttleConsoles(comp.Owner);
+                    RefreshLateJoinConsoles();
                     RaiseLocalEvent(new HyperspaceJumpCompletedEvent());
                     break;
                 case FTLState.Cooldown:
                     RemComp<FTLComponent>(comp.Owner);
                     _console.RefreshShuttleConsoles(comp.Owner);
+                    RefreshLateJoinConsoles();
                     break;
                 default:
                     _sawmill.Error($"Found invalid FTL state {comp.State} for {comp.Owner}");

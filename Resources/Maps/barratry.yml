@@ -114,6 +114,7 @@ entities:
   - type: MetaData
   - pos: 0.43985805,0.83991814
     parent: 0
+    
     type: Transform
   - chunks:
       -1,-1:
